@@ -1,0 +1,43 @@
+
+@import "tailwindcss";
+
+:root {
+  --primary: #FF8AC9;
+  --secondary: #FFD1F2;
+  --accent: #FFF3C7;
+  --background: #FFF4FB;
+  --foreground: #333;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body, Inter, Arial, Helvetica, sans-serif);
+}
+
+.font-title {
+  font-family: var(--font-poppins, 'Poppins', 'Baloo 2', cursive);
+}
+.font-body {
+  font-family: var(--font-inter, Inter, Arial, Helvetica, sans-serif);
+}
+
+/* Animations */
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: none; }
+}
+.animate-fadein {
+  animation: fadein 0.8s cubic-bezier(0.4,0,0.2,1) both;
+}
+
+/* Card flip utility */
+.perspective {
+  perspective: 800px;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+.backface-hidden, [backface-visibility="hidden"] {
+  backface-visibility: hidden;
+}
